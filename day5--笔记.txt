@@ -1,0 +1,23 @@
+一、TCP客户端
+	1、流程
+		socket();
+		connect();
+		read()/write();
+		close();
+	2、函数
+	connect()函数
+	头文件：
+	 #include <sys/types.h>          /* See NOTES */
+     #include <sys/socket.h>
+	函数原型：
+		int connect(int sockfd, const struct sockaddr *addr,socklen_t addrlen);
+	函数功能：
+		请求服务器连接
+	参数说明：
+		sockfd：socket()函数的返回值；
+		addr：地址结构变量的地址（server）；
+		addrlen：地址结构的长度；
+	返回值：
+		成功：0
+		失败：-1  同时将错误信息保存在errno中；
+		
